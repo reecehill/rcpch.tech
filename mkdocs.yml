@@ -1,0 +1,98 @@
+# main site metadata and titles
+site_name: rcpch.tech
+site_description: RCPCH Incubator Landing pages
+site_author: The Royal College of Paediatrics and Child Health
+site_url: https://rcpch.tech
+
+# copyright information which is shown in the footer
+copyright: Copyright &copy; 2024 Royal College of Paediatrics and Child Health (RCPCH)
+
+# these lines configure the 'GitHub repo' widget on the top right
+repo_url: https://github.com/rcpch/rcpch.tech
+repo_name: rcpch/rcpch.tech
+edit_uri: blob/live/docs
+
+# `mkdocs serve` serves the documentation at custom port (to avoid clashing with other services we commonly run)
+dev_addr: "0.0.0.0:8001"
+
+# theme settings, fonts, colours
+theme:
+  name: material
+  #custom_dir: rcpch-theme
+  features:
+    - content.action.edit # explicitly adds edit button (Material4MkDocs9.0)
+    - content.action.view # explicitly adds view button (Material4MkDocs9.0)
+    - navigation.expand
+    - navigation.footer # explicitly adds footer prev/next (Material4MkDocs9.0)
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    # - toc.integrate
+
+  palette:
+    # Light mode only for now
+    scheme: default
+
+  font:
+    text: Montserrat
+    code: Roboto Mono
+
+  logo: '_assets/_images/rcpch_logo.png'
+
+# mkdocs plugins
+plugins:
+  - git-committers:
+      repository: rcpch/rcpch.tech
+      branch: live
+      enabled: !ENV [ENABLE_GIT_COMMITTERS, false] # makes Git Committers optional
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  - search
+  # - with-pdf:
+  #     back_cover: false
+  #     cover_title: rcpch.tech
+  #     cover_subtitle:
+  #     exclude_pages:
+  #       - 'home/download/'
+  #     output_path: pdf/rcpch-tech.pdf
+  #     enabled_if_env: ENABLE_PDF_EXPORT
+  #     #debug_html: true
+  #     #show_anchors: true
+  #     #verbose: true
+
+# additional markdown features
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+# set extra CSS file
+extra_css:
+  - _assets/_stylesheets/extra.css
+
+# footer links and variables
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/rcpchtweets
+    - icon: fontawesome/brands/github
+      link: https://github.com/rcpch
