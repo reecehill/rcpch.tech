@@ -1,4 +1,4 @@
-version: "3.11" # Docker Compose specification version! NOT the Python version
+# docker compose file for rcpch.tech
 
 services:
   mkdocs:
@@ -6,7 +6,7 @@ services:
     volumes:
       - .:/app/
     ports:
-      - 8001:8001
+      - 8022:8000
     environment:
       - ENABLE_GIT_COMMITTERS=False # Disables git committer extension in local dev
       - ENABLE_PDF_EXPORT=0 # Disables automatic PDF generation in local dev

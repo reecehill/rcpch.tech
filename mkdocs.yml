@@ -8,20 +8,21 @@ site_url: https://rcpch.tech
 copyright: Copyright &copy; 2024 Royal College of Paediatrics and Child Health (RCPCH)
 
 # these lines configure the 'GitHub repo' widget on the top right
-repo_url: https://github.com/rcpch/rcpch.tech
-repo_name: rcpch/rcpch.tech
-edit_uri: blob/live/docs
+# COMMENTED OUT AS NOT REALLY NEEDED FOR POC rcpch.tech SITE 20.03.2024
+# repo_url: https://github.com/rcpch/rcpch.tech
+# repo_name: rcpch/rcpch.tech
+# edit_uri: blob/live/docs
 
 # `mkdocs serve` serves the documentation at custom port (to avoid clashing with other services we commonly run)
-dev_addr: "0.0.0.0:8001"
+dev_addr: "0.0.0.0:8000"
 
 # theme settings, fonts, colours
 theme:
   name: material
   #custom_dir: rcpch-theme
   features:
-    - content.action.edit # explicitly adds edit button (Material4MkDocs9.0)
-    - content.action.view # explicitly adds view button (Material4MkDocs9.0)
+    # - content.action.edit # COMMENTED OUT AS NOT REALLY NEEDED FOR POC rcpch.tech SITE 20.03.2024
+    # - content.action.view # COMMENTED OUT AS NOT REALLY NEEDED FOR POC rcpch.tech SITE 20.03.2024
     - navigation.expand
     - navigation.footer # explicitly adds footer prev/next (Material4MkDocs9.0)
     - navigation.instant
@@ -32,8 +33,22 @@ theme:
     # - toc.integrate
 
   palette:
-    # Light mode only for now
-    scheme: default
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: deep purple
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
 
   font:
     text: Montserrat
@@ -44,13 +59,15 @@ theme:
 
 # mkdocs plugins
 plugins:
-  - git-committers:
-      repository: rcpch/rcpch.tech
-      branch: live
-      enabled: !ENV [ENABLE_GIT_COMMITTERS, false] # makes Git Committers optional
+  # COMMENTED OUT AS NOT REALLY NEEDED FOR POC rcpch.tech SITE 20.03.2024
+  # - git-committers:
+  #     repository: rcpch/rcpch.tech
+  #     branch: live
+  #     enabled: !ENV [ENABLE_GIT_COMMITTERS, false] # makes Git Committers optional
   # - git-revision-date-localized:
   #     enable_creation_date: true
   - search
+  # COMMENTED OUT AS NOT REALLY NEEDED FOR POC rcpch.tech SITE 20.03.2024
   # - with-pdf:
   #     back_cover: false
   #     cover_title: rcpch.tech
