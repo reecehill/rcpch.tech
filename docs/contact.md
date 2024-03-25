@@ -6,6 +6,8 @@ reviewers:
 
 ## Technical and Clinical Enquiries
 
+Get in touch at incubator@rcpch.ac.uk.
+
 !!! info "Signal Chat"
 
     We have an RCPCH Developers Signal chat group for instant message support of RCPCH projects.
