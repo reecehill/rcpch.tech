@@ -10,4 +10,4 @@ Ask us how.
 As the in-house development team at the Royal College of Paediatrics
 and Child Health, we build **best practice as code**.
 
-**incubator@rcpch.ac.uk**
+[**incubator@rcpch.ac.uk**](mailto:incubator@rcpch.ac.uk)
