@@ -51,7 +51,7 @@ theme:
     code: Roboto Mono
 
   favicon: _assets/_images/dynamic-child-favicon-purple.png
-  logo: '_assets/_images/rcpch_logo.png'
+  logo: _assets/_images/2024-purple-incubator-logo.png
 
 # mkdocs plugins
 plugins:
