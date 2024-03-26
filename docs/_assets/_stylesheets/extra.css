@@ -1,9 +1,69 @@
 /* these are colours and fonts consistent with RCPCH branding guidelines - see github for info */
 
 :root {
-  --md-primary-fg-color: #3366cc;
-  --md-accent-fg-color: #11a7f2;
-  --rcpch-pink-color: #f18cc9;
+  /* RCPCH now has an expanded colour palette to meet the growing needs of all communications. */
+  /* Colour is a useful tool to communicate structure, meaning and to add interest but it is */
+  /* important that it is used judiciously. It can be used to contrast or co-ordinate. */
+
+  /* As a general rule: */
+  /* * The RCPCH Main Brand colours should predominate. */
+  /* * SGA colours should predominate for allocated Strategic Growth Area activities */
+  /* * Any single secondary colour from the bright colour palette can be used to add emphasis. */
+  /* * To create balance these bright colours should be juxtaposed with one or more of the cool greys */
+
+  /* Please contact the Digital and Creative Media team for advice before using colour in each instance. */
+
+  /* Main Brand */
+  --rcpch-bright-blue: #11a7f2;
+  --rcpch-dark-blue: #0d0d58;
+
+  /* Strategic Growth Area Colours */
+  --rcpch-purple: #7159aa;
+  --rcpch-magenta: #E00087;
+  --rcpch-strong-green: #66cc33;
+
+  /* In the branding guidance document, Secondary colours are shown 'linked' to RCPCH Strong Blue */
+  --rcpch-strong-blue: #3366cc;
+  /* Secondary Colours */
+  --rcpch-red: #e60700;
+  --rcpch-orange: #ff8000;
+  --rcpch-yellow: #fdc300;
+  --rcpch-gold: #c2a712;
+  --rcpch-vivid-green: #c8d400;
+  --rcpch-aqua-green: #00bdaa;
+
+  /* Greys */
+  --rcpch-white: #ffffff;
+  --rcpch-light-grey: #d9d9d9;
+  --rcpch-mid-grey: #b3b3b3;
+  --rcpch-dark-grey: #808080;
+  --rcpch-charcoal: #4d4d4d;
+  --rcpch-black: #000000;
+
+  /* Programmatic Tints */
+  --rcpch-purple-dark: color-mix(in srgb, var(--rcpch-purple) 50%, black);
+}
+
+[data-md-color-scheme="rcpch-light"] {
+  --md-primary-fg-color: var(--rcpch-purple);
+  --md-accent-fg-color: var(--rcpch-strong-blue);
+  /* --md-primary-bg-color: var(--rcpch-light-grey); */
+  --md-footer-bg-color: var(--rcpch-purple-dark);
+
+}
+
+[data-md-color-scheme="rcpch-dark"] {
+   /* Indicate that the site is rendered with a dark color scheme */
+  color-scheme: dark;
+
+  --md-default-fg-color: var(--rcpch-white);
+  --md-primary-fg-color: var(--rcpch-purple);
+  --md-accent-fg-color: var(--rcpch-bright-blue);
+  --md-default-bg-color: var(--rcpch-charcoal);
+  --md-primary-bg-color: var(--rcpch-white);
+  --md-footer-bg-color: var(--rcpch-purple-dark);
+  --md-typeset-color: var(--md-default-fg-color);
+  --md-typeset-a-color: var(--rcpch-bright-blue);
 }
 
 /* FONTS & TYPESETTING */
@@ -31,15 +91,6 @@
   font-size: 0.75rem;
 }
 
-
-/* HEADER & FOOTER */
-
-/* make the header white with blue text */
-.md-header {
-  background-color: #ffffff;
-  color: #0d0d58;
-}
-
 /* Switch off header hover behaviour */
 .md-search__input:hover{
   background-color: var(--md-accent-fg-color);
@@ -49,15 +100,7 @@
   opacity: inherit;
 }
 
-/* Make the footer a nice RCPCH blue */
-.md-footer {
-  background-color: var(--md-primary-fg-color);
-}
-
-
-
 /* NAVIGATION */
-
 /* enlarges the font used for titles and navbar */
 .md-header__title {
   font-size: 1.5rem;
@@ -79,27 +122,12 @@
   max-width: 70rem;
 }
 
-
-
-
-/* MOBILE */
-
-/* mobile  - make the header white with blue text */
-.md-nav--primary .md-nav__title[for="__drawer"] {
-  background-color: #ffffff;
-  color: #0d0d58;
-}
-
 /* mobile - enlarges the logo image */
 .md-nav__title .md-nav__button.md-logo img {
   width: 100px;
 }
 
-
-
-
 /* IMAGES */
-
 .md-content img {
   border-radius: 0.2em;
   box-shadow: 0 0 0.2em 0 #777;
@@ -124,33 +152,4 @@ button {
 }
 
 
-/* HERO SECTION OF HOME PAGE */
-.mdx-hero__content {
-  background-color: #11a7f2;
-  padding: 3em;
-}
 
-.mdx-hero__content.md-typeset>h1,
-.mdx-hero__content.md-typeset>h2,
-.mdx-hero__content.md-typeset>p {
-  color: #ffffff;
-}
-
-.mdx-hero__content a.md-button:hover {
-    background-color: var(--rcpch-pink-color);
-    border-color: var(--rcpch-pink-color);
-}
-
-.latex img {
-  -moz-box-shadow: 0px 0px 0px #ccc;
-  -webkit-box-shadow: 0px 0px 0px #ccc;
-  box-shadow: 0px 0px 0px #ccc;
-  border: none!important;
-}
-
-img {
-  -moz-box-shadow: 0px 0px 0px #ccc;
-  -webkit-box-shadow: 0px 0px 0px #ccc;
-  box-shadow: 0px 0px 0px #ccc;
-  border: none!important;
-}
